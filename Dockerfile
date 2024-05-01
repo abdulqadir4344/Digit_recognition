@@ -7,9 +7,9 @@ RUN apt-get update
 
 # install dependencies
 RUN pip install --upgrade pip
-COPY ./requirements.txt /app/
+COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-COPY . /app
-
+COPY . .
+CMD ["flask", "run", "--host", "0.0.0.0"]
 ENTRYPOINT [ "waitress-serve","app:app"]
