@@ -131,4 +131,4 @@ if __name__ == "__main__":
         'checkpoint/mnist.pt', map_location=DEVICE))
     MODEL.to(DEVICE)
     MODEL.eval()
-    app.run(host=config.HOST, port=config.PORT, debug=config.DEBUG_MODE)
+    app.run(host='0.0.0.0', port=5000)
