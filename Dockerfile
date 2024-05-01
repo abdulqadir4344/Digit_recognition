@@ -12,4 +12,4 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-ENTRYPOINT [ "gunicorn","app:app"]
+ENTRYPOINT [ "waitress-serve","app:app"]
