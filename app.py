@@ -132,3 +132,4 @@ if __name__ == "__main__":
     MODEL.to(DEVICE)
     MODEL.eval()
     app.run(host='0.0.0.0', port=5000)
+    # app.run(host=config.HOST, port=config.PORT, debug=config.DEBUG_MODE)
